@@ -40,7 +40,7 @@ Endpoint pro odhlášení uživatele.
 * Úspěch (200 OK): Odhlášení úspěšné.
 * Chyba (400 Bad Request): Unable to log out: Chyba při odhlášení.
 
-# /etc/nginx/sites-available
+## /etc/nginx/sites-available
 Pro funkční přesměrování z portu 5000 bylo potřeba upravit soubor default v /etc/nginx/sites-available následovně:
 
     server {
