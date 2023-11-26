@@ -1,10 +1,10 @@
 {
-    "name": "jecna-template-project",
+    "name": "Rest API",
     "version": "1.1.0",
-    "description": "Test project for Ječná",
+    "description": "Ukol Rest API WA",
     "main": "index.js",
     "type": "module",
-    "author": "Jan Pavlát",
+    "author": "Tomáš Novotný",
     "license": "ISC",
     "scripts": {
         "start": "nodemon index.js"
