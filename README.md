@@ -1,5 +1,5 @@
-# REST API Dokumentace
-Tento projekt implementuje základní REST API pomocí frameworku Express v JavaScriptu. API obsahuje následující funkce:
+# REST API
+Implementace základního REST API pomocí frameworku Express. API obsahuje následující endpointy:
 
 ## POST /login
 Endpoint pro ověření uživatelů a přihlášení.
@@ -39,7 +39,3 @@ Endpoint pro odhlášení uživatele.
 ### Response
 * Úspěch (200 OK): Odhlášení úspěšné.
 * Chyba (400 Bad Request): Unable to log out: Chyba při odhlášení.
-### Poznámky
-* Hesla uživatelů jsou ukládána v šifrované podobě.
-* Pro komunikaci s databází se využívá pool připojení (dbPool).
-Toto API umožňuje uživatelům přihlašování, registraci a odhlašování prostřednictvím uvedených koncových bodů.
