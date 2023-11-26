@@ -39,3 +39,25 @@ Endpoint pro odhlášení uživatele.
 ### Response
 * Úspěch (200 OK): Odhlášení úspěšné.
 * Chyba (400 Bad Request): Unable to log out: Chyba při odhlášení.
+
+# /etc/nginx/sites-available
+Pro funkční přesměrování z portu 5000 bylo potřeba upravit soubor default v /etc/nginx/sites-available následovně:
+
+    server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        servername ;
+
+    location / {
+        proxy_pass http://localhost:5000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        try_files $uri @nodejs;
+    }
+
+    location @nodejs {
+        proxy_pass http://localhost:5000/;
+    }
