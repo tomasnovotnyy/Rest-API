@@ -1,6 +1,9 @@
 # REST API
 Implementace základního REST API pomocí frameworku Express. API obsahuje následující endpointy:
 
+## IP ADRESA na AWS
+http://18.215.243.85/
+
 ## POST /login
 Endpoint pro ověření uživatelů a přihlášení.
 
